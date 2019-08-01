@@ -1,0 +1,44 @@
+@import "../../styles/styles";
+
+.header {
+  font-size: 2em;
+  text-align: center;
+  padding: .3em;
+  color: white;
+  background-color: #0b2655;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row-reverse;
+  .side-charts {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 0 0 20%;
+  }
+  .content {
+    background-color: $col-main-bg;
+    flex: 0 0 80%;
+    .overview-chart {
+      border: $border-style-thin;
+      display: flex;
+      flex-direction: column;
+      .top-chart-title {
+          @extend .global-title;
+          font-size: $font-l;
+          padding: .5em;
+      }
+    }
+    .bottom-charts {
+      background-color: $col-main-bg;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: $mobile-bp) {
+  .layout, .layout .content .bottom-charts {
+    flex-direction: column-reverse;
+  }
+}

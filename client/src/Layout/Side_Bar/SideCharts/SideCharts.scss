@@ -1,0 +1,13 @@
+@import "../../../styles/styles";
+
+.side-charts-title {
+  @extend .global-title;
+}
+
+.chartName {
+  @extend .global-sub-title
+}
+
+.small-chart-container {
+  border: 2px solid $col-dark-gray;
+}

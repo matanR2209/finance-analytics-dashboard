@@ -1,0 +1,41 @@
+@import "../../../styles/styles";
+
+.bottom-main-chart, .bottom-alter-chart {
+  flex: 1 1 50%;
+  border: $border-style-thin;
+  .title {
+    @extend .global-title;
+    display: flex;
+    justify-content: center;
+    font-size: $font-l;
+    padding: .5em;
+    min-height: 1.5em;
+    height: auto;
+  }
+}
+
+.bottom-alter-chart {
+  .title {
+    justify-content: space-evenly;
+  }
+  .MuiInputBase-input {
+    padding-left: .7em;
+    margin-top: .5em;
+    margin-left: .5em;
+    color: white !important;
+    border-radius: 5px;
+    background: rgb(248,80,50); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(248,80,50,1) 0%, rgba(241,111,92,1) 100%, rgba(246,41,12,1) 100%, rgba(240,47,23,1) 100%, rgba(231,56,39,1) 100%, rgba(241,111,92,1) 101%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 100%,rgba(246,41,12,1) 100%,rgba(240,47,23,1) 100%,rgba(231,56,39,1) 100%,rgba(241,111,92,1) 101%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 100%,rgba(246,41,12,1) 100%,rgba(240,47,23,1) 100%,rgba(231,56,39,1) 100%,rgba(241,111,92,1) 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f16f5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+}
+
+@media (max-width: $mobile-bp) {
+  .bottom-alter-chart {
+    .title {
+      flex-direction: column;
+    }
+  }
+}

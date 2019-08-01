@@ -1,0 +1,28 @@
+@import "../../styles/styles";
+
+.live-view-container {
+  background-color: $col-main-bg;
+  .live-header {
+    @extend .global-title;
+    font-size: $font-l;
+    padding: .5em;
+  }
+  .charts-container {
+    display: flex;
+    flex-direction: row;
+    .left-col, .mid-col, .right-col {
+      border: $border-style-thin;
+      flex: 1 1 33%;
+    }
+    .sub-title {
+      @extend .global-sub-title;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $mobile-bp) {
+  .live-view-container .charts-container {
+    flex-direction: column;
+  }
+}
